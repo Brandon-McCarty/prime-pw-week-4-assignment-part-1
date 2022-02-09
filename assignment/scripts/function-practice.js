@@ -62,10 +62,18 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let animals = ['Dolphin', 'Bear', 'Parrot', 'Turtle']
+let movies = ['Star Wars', 'Harry Potter', 'Avengers']
+let blank =[]
+let characters = ['Geralt', 'Thor', 'Ron Swanson', 'Reinhardt', 'General Grievous']
 function getLast( array ) {
-
+  console.log('in getLast');
+  return array[array.length - 1];
 }
-
+console.log(getLast(animals));
+console.log(getLast(movies));
+console.log(getLast(blank));
+console.log(getLast(characters));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
