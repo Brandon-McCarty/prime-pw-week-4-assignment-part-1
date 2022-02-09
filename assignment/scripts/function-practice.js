@@ -29,12 +29,19 @@ function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
 }
 console.log('Adding 16 & 78: ', addNumbers(16, 78));
+console.log('Adding 102 & 673: ', addNumbers(102, 673));
+console.log('Adding 12 & 42: ', addNumbers(12, 42));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree(num0, num1, num2 ){
+  console.log('in multiplyThree');
+  let answer = num0 * num1 * num2;
+  return answer;
 }
-
+console.log('Multiplying 2, 4, & 9: ', multiplyThree(2, 4, 9));
+console.log('Multiplying 0.5, 400, & 234: ', multiplyThree(0.5, 400, 234));
+console.log('Multiplying 0.45, 0.62, & 15: ', multiplyThree(0.45, 0.62, 15));
+console.log('Multiplying 66, -2, & 1.2: ', multiplyThree(66, -2, 1.2));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
