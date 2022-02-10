@@ -134,3 +134,21 @@ console.log('The positive numbers from array1 are: ', newArray(array1));
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+// --Create a function that will return an integer number corresponding --
+//     to the amount of digits in the given integer.
+function digitNumber (num){
+  let digits = 0;
+  if (num >= 1) ++digits; // given input is greater than or equal to 1, increment digits
+                          // because digits will always be at least 1 in this case if true
+
+  while (num /10 >= 1){ // increase digits by one for each time num can be divided by 10
+    num /= 10;          // each growth by a factor of 10 will add an addtional digit for each time
+    ++digits;           // this can occur
+  }
+  return digits;
+}
+
+console.log('The number of digits in 5004 is: ', digitNumber(5004));
+console.log('The number of digits in 7 is: ',digitNumber(7));
+console.log('The number of digits in 120456 is: ',digitNumber(120456));
+console.log('The number of digits in 67 is: ',digitNumber(67));
