@@ -77,9 +77,21 @@ console.log(getLast(characters));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+function find(value, array){
+  for (let i = 0; i < array.length; i++){
+    if (array[i] == value)
+    return true;
+  }
+    return false;
 }
+console.log('Parrot is in animals: ', find('Parrot', animals));
+console.log('Zebra is in animals: ', find('Zebra', animals));
+console.log('Star Wars is in movies: ', find('Star Wars', movies));
+console.log('Saving Private Ryan is in movies: ', find('Saving Private Ryan', movies));
+console.log('Rick is in characters: ', find('Rick', characters));
+console.log('Reinhardt is in characters: ', find('Reinhardt', characters));
+console.log('reinhardt is in characters: ', find('reinhardt', characters));
+
 
 // ----------------------
 // Stretch Goals
