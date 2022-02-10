@@ -9,6 +9,7 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
+hello()
 console.log('Test - should say "Hello World!"', hello());
 
 
@@ -19,6 +20,7 @@ function helloName( name ) {
   return  `Hello, ${name}!`;
 }
 // Remember to call the function to test
+helloName()
 console.log(helloName('Samuel L. Jackson'))
 
 // 3. Function to add two numbers together & return the result
@@ -28,6 +30,7 @@ function addNumbers( firstNumber, secondNumber ) {
   return answer;
   // return firstNumber + secondNumber;
 }
+addNumbers()
 console.log('Adding 16 & 78: ', addNumbers(16, 78));
 console.log('Adding 102 & 673: ', addNumbers(102, 673));
 console.log('Adding 12 & 42: ', addNumbers(12, 42));
@@ -38,6 +41,7 @@ function multiplyThree(num0, num1, num2 ){
   let answer = num0 * num1 * num2;
   return answer;
 }
+multiplyThree()
 console.log('Multiplying 2, 4, & 9: ', multiplyThree(2, 4, 9));
 console.log('Multiplying 0.5, 400, & 234: ', multiplyThree(0.5, 400, 234));
 console.log('Multiplying 0.45, 0.62, & 15: ', multiplyThree(0.45, 0.62, 15));
@@ -46,6 +50,7 @@ console.log('Multiplying 66, -2, & 1.2: ', multiplyThree(66, -2, 1.2));
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
+  console.log('In isPositive');
   if ( number > 0 ){
     return true;
   }
@@ -53,6 +58,7 @@ function isPositive( number ) {
     return false;
   }
 }
+isPositive()
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -70,6 +76,8 @@ function getLast( array ) {
   console.log('in getLast');
   return array[array.length - 1];
 }
+
+getLast(animals)
 console.log(getLast(animals));
 console.log(getLast(movies));
 console.log(getLast(blank));
@@ -78,12 +86,15 @@ console.log(getLast(characters));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array){
+  console.log('in find');
   for (let i = 0; i < array.length; i++){
     if (array[i] == value)
     return true;
   }
     return false;
 }
+
+find('Avengers', characters)
 console.log('Parrot is in animals: ', find('Parrot', animals));
 console.log('Zebra is in animals: ', find('Zebra', animals));
 console.log('Star Wars is in movies: ', find('Star Wars', movies));
