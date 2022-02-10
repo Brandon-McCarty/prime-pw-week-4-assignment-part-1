@@ -124,8 +124,13 @@ console.log('The sum of the numbers in sumArray2 is: ', sumAll(sumArray2));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+const array1 = [-5, -3, 0, 2, 12]
+function newArray (array){
+  let posArray = array.filter(num => num > 0);
+  return posArray;
+}
 
-
+console.log('The positive numbers from array1 are: ', newArray(array1));
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
